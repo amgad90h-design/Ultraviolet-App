@@ -1,124 +1,1834 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-		/>
-		<title>Ultraviolet | Sophisticated Web Proxy</title>
-		<meta
-			name="description"
-			content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
-		/>
-		<meta
-			name="keywords"
-			content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked"
-		/>
-		<meta
-			name="theme-color"
-			media="(prefers-color-scheme: dark)"
-			content="#434c5e"
-		/>
-		<meta name="googlebot" content="index, follow, snippet" />
-		<link rel="shortcut icon" content="favicon.ico" />
-		<link rel="stylesheet" href="index.css" />
-		
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>MEGO ELROSY PROXY</title>
+  <meta name="description" content="MEGO ELROSY PROXY - تصفح حر بلا قيود مع أمان وخصوصية تامة" />
 
-		<script src="baremux/index.js"></script>
-		<script src="uv/uv.bundle.js"></script>
-		<script src="uv/uv.config.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
 
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "FAQPage",
-				"mainEntity": [
-					{
-						"@type": "Question",
-						"name": "What is Ultraviolet (Web Proxy)?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "Highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!"
-						}
-					},
-					{
-						"@type": "Question",
-						"name": "How do I unblock sites using Ultraviolet?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "Simply head to an official site featuring Ultraviolet such as Holy Unblocker or Incognito! You can also self-host Ultraviolet on your own web server for maximum privacy."
-						}
-					},
-					{
-						"@type": "Question",
-						"name": "What if Ultraviolet is blocked or not working?",
-						"acceptedAnswer": {
-							"@type": "Answer",
-							"text": "Join the Titanium Network Discord at discord.gg/unblock!"
-						}
-					}
-				]
-			}
-		</script>
-	</head>
+  <!-- Three.js for 3D Deep Space & Stars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
-	<body>
-		<div
-			title="Ultraviolet Logo"
-			class="flex-center logo-wrapper header-center"
-		>
-			<img class="logo" src="uv.png" alt="Ultraviolet" />
-			<h1>Ultraviolet | TN</h1>
-		</div>
-		<div class="flex-center desc left-margin">
-			<p>
-				Ultraviolet is highly sophisticated proxy used for evading internet
-				censorship.
-			</p>
-		</div>
+  <!-- Ultraviolet & BareMux Core Scripts (Ultraviolet-App) -->
+  <script src="baremux/index.js" defer></script>
+  <script src="epoxy/index.js" defer></script>
+  <script src="uv/uv.bundle.js" defer></script>
+  <script src="uv/uv.config.js" defer></script>
+  <script src="register-sw.js" defer></script>
+  <script src="search.js" defer></script>
+  <script src="index.js" defer></script>
 
-		<form id="uv-form" class="flex-center">
-			<input
-				id="uv-search-engine"
-				value="https://www.google.com/search?q=%s"
-				type="hidden"
-			/>
-			<input id="uv-address" type="text" placeholder="Search the web freely" />
-		</form>
-		<div class="desc left-margin">
-			<p id="uv-error"></p>
-			<pre id="uv-error-code"></pre>
-		</div>
-		<footer>
-			<div>
-				<a
-					title="The TitaniumNetwork GitHub organization"
-					href="https://github.com/titaniumnetwork-dev"
-					>TitaniumNetwork</a
-				>
-				<a title="The TitaniumNetwork Discord" href="https://discord.gg/unblock"
-					>Discord</a
-				>
-				<a
-					title="The TompHTTP GitHub organization"
-					href="https://github.com/tomphttp"
-					>TompHTTP</a
-				>
-				<a
-					title="The official deployment repository for Ultraviolet"
-					href="https://github.com/titaniumnetwork-dev/Ultraviolet-App"
-					>GitHub</a
-				>
-				<a title="License information" href="credits.html">Credits</a>
-			</div>
-			<div>
-				<span>Ultraviolet &copy; TN 2023</span>
-			</div>
-		</footer>
-		<iframe style="display: none" id="uv-frame"></iframe>
-		<script src="register-sw.js"></script>
-		<script src="search.js"></script>
-		<script src="index.js"></script>
-	</body>
+  <style>
+    :root {
+      --bg: #02030a;
+      --surface: rgba(11, 14, 28, 0.78);
+      --border: rgba(245, 197, 66, 0.22);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --gold: #f5c542;
+      --gold-soft: #ffe08a;
+      --crimson: #ff2e63;
+      --wa: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Cairo", system-ui, -apple-system, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 14px 26px;
+      position: relative;
+    }
+
+    #bg-space {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .nebula-glow {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 20% 25%, rgba(88, 28, 135, 0.2), transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(14, 116, 144, 0.18), transparent 52%),
+        radial-gradient(circle at 50% 50%, transparent 55%, rgba(2, 3, 10, 0.8) 100%);
+    }
+
+    .topbar {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 980px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.65);
+    }
+
+    .brand-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Space Grotesk", "Cairo", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gold-soft);
+    }
+
+    .live-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e;
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.6; }
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-only-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .icon-only-btn:hover {
+      transform: translateY(-2px) scale(1.06);
+      border-color: var(--gold);
+    }
+
+    .icon-only-btn.wa {
+      border-color: rgba(37, 211, 102, 0.38);
+      background: rgba(37, 211, 102, 0.1);
+    }
+
+    .stage {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 980px;
+      margin: 22px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hero-title { text-align: center; }
+
+    .hero-title h1 {
+      font-family: "Space Grotesk", "Cairo", sans-serif;
+      font-size: clamp(1.9rem, 5.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 15%, var(--gold-soft) 55%, var(--crimson) 95%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .console-3d {
+      width: 100%;
+      background: var(--surface);
+      backdrop-filter: blur(22px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.78);
+    }
+
+    #uv-form {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .input-wrap {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 16px;
+      color: var(--gold);
+      pointer-events: none;
+      display: flex;
+    }
+
+    #uv-address {
+      width: 100%;
+      background: rgba(4, 6, 14, 0.9);
+      border: 1px solid rgba(245, 197, 66, 0.25);
+      color: var(--text);
+      padding: 15px 18px 15px 46px;
+      border-radius: 16px;
+      font-size: 1rem;
+      outline: none;
+      direction: ltr;
+      text-align: left;
+    }
+
+    #uv-address:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(245, 197, 66, 0.15);
+    }
+
+    #uv-address::placeholder {
+      color: var(--muted);
+      text-align: right;
+      direction: rtl;
+    }
+
+    .launch-btn {
+      background: linear-gradient(135deg, var(--gold), #ff6b35, var(--crimson));
+      color: #050507;
+      font-weight: 900;
+      font-size: 1rem;
+      border: none;
+      padding: 15px 28px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .engine-pills {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+
+    .engine-pills::-webkit-scrollbar { display: none; }
+
+    .engine-pill {
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .engine-pill.active {
+      background: linear-gradient(135deg, rgba(245, 197, 66, 0.22), rgba(255, 46, 99, 0.22));
+      border-color: var(--gold);
+      color: var(--gold-soft);
+    }
+
+    .error-box {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(255, 46, 99, 0.14);
+      border: 1px solid rgba(255, 46, 99, 0.45);
+      color: #fda4af;
+      font-size: 0.88rem;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .error-box.has-error { display: block; }
+
+    /* Featured Trio */
+    .featured-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, rgba(16, 18, 38, 0.88), rgba(45, 14, 34, 0.65));
+      backdrop-filter: blur(22px);
+      border: 1px solid rgba(255, 46, 99, 0.45);
+      border-radius: 22px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .feature-card.cinema {
+      background: linear-gradient(135deg, rgba(20, 16, 10, 0.88), rgba(55, 35, 10, 0.62));
+      border-color: rgba(245, 197, 66, 0.45);
+    }
+
+    .feature-card.live {
+      background: linear-gradient(135deg, rgba(10, 24, 18, 0.88), rgba(14, 52, 34, 0.62));
+      border-color: rgba(34, 197, 94, 0.45);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+
+    .feature-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: right;
+    }
+
+    .orb-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: conic-gradient(from 0deg, var(--gold), var(--crimson), #38bdf8, var(--gold));
+      padding: 2px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .orb-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: #070812;
+      display: grid;
+      place-items: center;
+    }
+
+    .feature-title {
+      font-family: "Space Grotesk", "Cairo", sans-serif;
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--gold-soft);
+    }
+
+    .feature-desc {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 2px;
+    }
+
+    .feature-cta {
+      padding: 7px 12px;
+      border-radius: 10px;
+      background: rgba(245, 197, 66, 0.14);
+      border: 1px solid rgba(245, 197, 66, 0.4);
+      color: var(--gold-soft);
+      font-weight: 800;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .hub-tabs {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+
+    .hub-tabs::-webkit-scrollbar { display: none; }
+
+    .hub-tab {
+      padding: 10px 20px;
+      border-radius: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 0.92rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .hub-tab.active {
+      background: linear-gradient(135deg, var(--gold), var(--crimson));
+      color: #050507;
+      border-color: transparent;
+    }
+
+    .hub-section { width: 100%; }
+    .hub-section.hidden { display: none; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .section-label {
+      color: var(--gold-soft);
+      font-size: 0.98rem;
+      font-weight: 800;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+      gap: 12px;
+    }
+
+    .app-card-3d {
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 16px 10px;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, border-color 0.2s;
+    }
+
+    .app-card-3d:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .app-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+
+    .app-icon-box img.real-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .app-name {
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* Fullscreen In-Proxy Browser Frame + Floating Home Bar */
+    #uv-frame {
+      border: none;
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;
+      display: none;
+      z-index: 9999;
+    }
+
+    .proxy-exit-pill {
+      position: fixed;
+      top: 10px;
+      left: 12px;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(8, 10, 22, 0.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(245, 197, 66, 0.45);
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .wa-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 50;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      text-decoration: none;
+    }
+
+    footer {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 980px;
+      padding: 14px 18px;
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    footer strong { color: var(--gold-soft); }
+
+    .dev-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dev-contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #4ade80;
+      font-weight: 800;
+      font-size: 0.84rem;
+      text-decoration: none;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(2, 3, 10, 0.88);
+      backdrop-filter: blur(14px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal-box {
+      width: 100%;
+      max-width: 780px;
+      height: min(88vh, 720px);
+      background: #080a16;
+      border: 1px solid rgba(245, 197, 66, 0.42);
+      border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.88);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .modal-box.compact {
+      height: auto;
+      max-width: 480px;
+    }
+
+    .modal-header {
+      padding: 14px 18px;
+      background: rgba(14, 17, 34, 0.96);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mini-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(245, 197, 66, 0.28);
+      color: var(--gold-soft);
+      padding: 6px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    /* Locked Cinema Box */
+    .locked-body {
+      padding: 36px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lock-circle {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background: rgba(245, 197, 66, 0.12);
+      border: 1px solid rgba(245, 197, 66, 0.4);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+    }
+
+    .locked-msg {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gold-soft);
+      line-height: 1.7;
+    }
+
+    /* Match Center */
+    .live-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .live-date-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .today-badge {
+      font-size: 0.86rem;
+      font-weight: 800;
+      color: var(--gold-soft);
+      background: rgba(245, 197, 66, 0.12);
+      border: 1px solid rgba(245, 197, 66, 0.3);
+      padding: 6px 14px;
+      border-radius: 12px;
+    }
+
+    .day-tabs { display: flex; gap: 8px; }
+
+    .day-tab {
+      padding: 7px 14px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .day-tab.active {
+      background: linear-gradient(135deg, #22c55e, #15803d);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .free-platforms {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .platform-chip {
+      padding: 7px 14px;
+      border-radius: 10px;
+      background: rgba(245, 197, 66, 0.1);
+      border: 1px solid rgba(245, 197, 66, 0.3);
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .match-card {
+      background: rgba(18, 22, 42, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .match-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .match-league {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--gold-soft);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .match-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .team-side {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+
+    .team-side.away {
+      justify-content: flex-end;
+      text-align: left;
+    }
+
+    .team-side img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    .match-center {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      min-width: 96px;
+    }
+
+    .match-score {
+      font-family: "Space Grotesk", "Cairo", sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px 12px;
+      border-radius: 10px;
+    }
+
+    .match-status {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    .match-status.live { background: rgba(255, 46, 99, 0.2); color: #ff4d79; }
+    .match-status.pre { background: rgba(245, 197, 66, 0.16); color: var(--gold-soft); }
+    .match-status.post { background: rgba(148, 163, 184, 0.16); color: #cbd5e1; }
+
+    /* Match Details Panel */
+    .details-panel {
+      display: none;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .details-panel.active { display: flex; }
+
+    .stat-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stat-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .stat-bar {
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      display: flex;
+    }
+
+    .stat-fill-home { background: var(--gold); height: 100%; }
+    .stat-fill-away { background: var(--crimson); height: 100%; }
+
+    .lineups-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .lineup-col {
+      background: rgba(18, 22, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 12px;
+      font-size: 0.82rem;
+    }
+
+    .lineup-col h4 {
+      color: var(--gold-soft);
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+    }
+
+    .player-item {
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+
+    /* AI Chat */
+    .ai-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .msg {
+      max-width: 85%;
+      padding: 12px 16px;
+      border-radius: 16px;
+      line-height: 1.65;
+      font-size: 0.94rem;
+      white-space: pre-wrap;
+    }
+
+    .msg.user {
+      align-self: flex-start;
+      background: linear-gradient(135deg, var(--crimson), #ff6b35);
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+
+    .msg.bot {
+      align-self: flex-end;
+      background: rgba(20, 24, 44, 0.92);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-bottom-left-radius: 4px;
+    }
+
+    .msg img.chat-thumb {
+      max-width: 220px;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .attachment-preview {
+      display: none;
+      padding: 8px 16px;
+      background: rgba(20, 24, 44, 0.9);
+      border-top: 1px solid var(--border);
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      color: var(--gold-soft);
+    }
+
+    .attachment-preview.active { display: flex; }
+
+    .ai-input-bar {
+      padding: 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(14, 17, 34, 0.96);
+    }
+
+    .attach-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(245, 197, 66, 0.25);
+      color: var(--gold-soft);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .ai-input-bar input[type="text"] {
+      flex: 1;
+      background: #04060e;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 11px 14px;
+      border-radius: 14px;
+      font-size: 0.94rem;
+      outline: none;
+    }
+
+    .send-ai-btn {
+      background: linear-gradient(135deg, var(--gold), var(--crimson));
+      color: #050507;
+      font-weight: 900;
+      border: none;
+      padding: 11px 18px;
+      border-radius: 14px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .launch-btn { width: 100%; }
+      .lineups-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg-space"></canvas>
+  <div class="nebula-glow"></div>
+
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <div class="brand-pill">
+      <span class="live-dot"></span>
+      <span>MEGO ELROSY PROXY</span>
+    </div>
+
+    <div class="top-actions">
+      <a class="icon-only-btn wa" href="https://wa.me/12494682167" target="_blank" rel="noopener" aria-label="WhatsApp" title="للتواصل مع المطور">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366">
+          <path d="M12.03 2C6.5 2 2 6.5 2 12.03c0 1.77.46 3.5 1.34 5.02L2 22l5.09-1.33a10 10 0 0 0 4.94 1.3h.01c5.53 0 10.03-4.5 10.03-10.03A10.04 10.04 0 0 0 12.03 2zm5.84 14.23c-.25.7-1.44 1.33-1.99 1.41-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.98-1.29-4.92-4.3-5.07-4.5-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.3.79 1.3 1.7 2.11 1.17 1.04 2.15 1.37 2.45 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.28.1 1.77.83 2.07.98.3.15.5.23.58.35.07.13.07.73-.18 1.43z"/>
+        </svg>
+      </a>
+
+      <a class="icon-only-btn" href="https://t.me/orzzorr" target="_blank" rel="noopener" aria-label="Telegram" title="تليجرام">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5c542">
+          <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Stage -->
+  <main class="stage">
+    <div class="hero-title">
+      <h1>MEGO ELROSY PROXY</h1>
+      <p>تصفح حر بلا قيود.. أمان كامل، سرعة صاروخية، وخصوصية تامة</p>
+    </div>
+
+    <!-- Search Console -->
+    <section class="console-3d">
+      <form id="uv-form">
+        <input id="uv-search-engine" value="https://duckduckgo.com/?q=%s" type="hidden" />
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </span>
+          <input id="uv-address" type="text" autocomplete="off" placeholder="اكتب رابط الموقع أو ابحث بحرية..." />
+        </div>
+        <button type="submit" class="launch-btn">انطلق الآن</button>
+      </form>
+
+      <div class="engine-pills" id="engine-pills">
+        <button type="button" class="engine-pill active" data-engine="https://duckduckgo.com/?q=%s">DuckDuckGo</button>
+        <button type="button" class="engine-pill" data-engine="https://www.google.com/search?q=%s">Google</button>
+        <button type="button" class="engine-pill" data-engine="https://www.bing.com/search?q=%s">Bing</button>
+        <button type="button" class="engine-pill" data-engine="https://search.brave.com/search?q=%s">Brave</button>
+        <button type="button" class="engine-pill" data-engine="https://search.yahoo.com/search?p=%s">Yahoo</button>
+        <button type="button" class="engine-pill" data-engine="https://yandex.com/search/?text=%s">Yandex</button>
+        <button type="button" class="engine-pill" data-engine="https://www.startpage.com/do/search?q=%s">Startpage</button>
+      </div>
+
+      <div class="error-box" id="error-box">
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
+      </div>
+    </section>
+
+    <!-- Featured Trio -->
+    <div class="featured-row">
+      <section class="feature-card" id="open-mego-ai" role="button" tabindex="0">
+        <div class="feature-left">
+          <div class="orb-icon">
+            <div class="orb-inner">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="1.9">
+                <path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/>
+                <circle cx="9.5" cy="11" r="1.1" fill="#f5c542"/>
+                <circle cx="14.5" cy="11" r="1.1" fill="#ff2e63"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">MEGO ELROSY AI</div>
+            <div class="feature-desc">مساعدك الذكي السريع للإجابة على كل أسئلتك</div>
+          </div>
+        </div>
+        <div class="feature-cta">تشغيل</div>
+      </section>
+
+      <section class="feature-card cinema" id="open-mego-cinema" role="button" tabindex="0">
+        <div class="feature-left">
+          <div class="orb-icon">
+            <div class="orb-inner">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f5c542" stroke-width="1.9">
+                <rect x="5" y="11" width="14" height="10" rx="2"/>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">مكتبة MEGO ELROSY</div>
+            <div class="feature-desc">قسم الأفلام والمسلسلات (قريباً)</div>
+          </div>
+        </div>
+        <div class="feature-cta">مغلق 🔒</div>
+      </section>
+
+      <section class="feature-card live" id="open-mego-live" role="button" tabindex="0">
+        <div class="feature-left">
+          <div class="orb-icon">
+            <div class="orb-inner">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.9">
+                <circle cx="12" cy="12" r="9"/>
+                <polygon points="12,7 16,10 14.5,15 9.5,15 8,10" fill="#22c55e" fill-opacity="0.3"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">MEGO ELROSY LIVE</div>
+            <div class="feature-desc">تابع مباريات اليوم والنتائج لحظة بلحظة</div>
+          </div>
+        </div>
+        <div class="feature-cta">المباريات</div>
+      </section>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="hub-tabs" id="hub-tabs">
+      <button type="button" class="hub-tab active" data-tab="all">الكل</button>
+      <button type="button" class="hub-tab" data-tab="apps">التطبيقات</button>
+      <button type="button" class="hub-tab" data-tab="games">الألعاب</button>
+    </div>
+
+    <!-- 1. Apps Section -->
+    <section class="hub-section" data-category="apps">
+      <div class="section-header">
+        <span class="section-label">التطبيقات والمنصات</span>
+      </div>
+      <div class="cards-grid">
+        <button type="button" class="app-card-3d" data-url="https://www.youtube.com">
+          <div class="app-icon-box">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+              <path d="M23.5 6.2a3.01 3.01 0 0 0-2.12-2.13C19.5 3.56 12 3.56 12 3.56s-7.5 0-9.38.51A3.01 3.01 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3.01 3.01 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.01 3.01 0 0 0 2.12-2.13A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8z" fill="#FF0000"/>
+              <path d="M9.6 15.6V8.4L15.84 12 9.6 15.6z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <span class="app-name">YouTube</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.tiktok.com">
+          <div class="app-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.7a8.18 8.18 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z" fill="#00F2EA"/>
+              <path d="M18.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-2.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0 0 12.68 6.34 6.34 0 0 0 6.34-6.34V8.7a8.18 8.18 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z" fill="#FF0050" fill-opacity="0.78"/>
+            </svg>
+          </div>
+          <span class="app-name">TikTok</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://web.whatsapp.com">
+          <div class="app-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366">
+              <path d="M12.03 2C6.5 2 2 6.5 2 12.03c0 1.77.46 3.5 1.34 5.02L2 22l5.09-1.33a10 10 0 0 0 4.94 1.3h.01c5.53 0 10.03-4.5 10.03-10.03A10.04 10.04 0 0 0 12.03 2zm5.84 14.23c-.25.7-1.44 1.33-1.99 1.41-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.98-1.29-4.92-4.3-5.07-4.5-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.3.79 1.3 1.7 2.11 1.17 1.04 2.15 1.37 2.45 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.28.1 1.77.83 2.07.98.3.15.5.23.58.35.07.13.07.73-.18 1.43z"/>
+            </svg>
+          </div>
+          <span class="app-name">WhatsApp</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://web.telegram.org">
+          <div class="app-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#26A5E4">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.48 1.02-.73 3.99-1.73 6.65-2.88 7.98-3.44 3.8-1.58 4.59-1.85 5.1-1.86.11 0 .37.03.54.17.14.12.18.28.2.45-.01.07-.01.21-.02.33z"/>
+            </svg>
+          </div>
+          <span class="app-name">Telegram</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.instagram.com">
+          <div class="app-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <defs>
+                <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#feda75"/>
+                  <stop offset="30%" stop-color="#fa7e1e"/>
+                  <stop offset="60%" stop-color="#d62976"/>
+                  <stop offset="100%" stop-color="#4f5bd5"/>
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="20" height="20" rx="6" stroke="url(#igGrad)" stroke-width="2.2"/>
+              <circle cx="12" cy="12" r="4.2" stroke="url(#igGrad)" stroke-width="2.2"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="#d62976"/>
+            </svg>
+          </div>
+          <span class="app-name">Instagram</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://x.com">
+          <div class="app-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFFFF">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <span class="app-name">X (Twitter)</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.google.com">
+          <div class="app-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M23.74 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-8.97z"/>
+              <path fill="#34A853" d="M12 24c3.3 0 6.08-1.09 8.1-2.96l-3.88-3.05c-1.1.74-2.51 1.18-4.22 1.18-3.24 0-5.99-2.19-6.97-5.13H1.02v3.14C3.03 21.18 7.21 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.03 14.04A7.18 7.18 0 0 1 4.65 12c0-.71.13-1.4.38-2.04V6.82H1.02A11.96 11.96 0 0 0 0 12c0 1.94.46 3.77 1.02 5.18l4.01-3.14z"/>
+              <path fill="#EA4335" d="M12 4.83c1.8 0 3.41.62 4.68 1.83l3.51-3.51C18.07 1.19 15.3 0 12 0 7.21 0 3.03 2.82 1.02 6.82l4.01 3.14C6.01 7.02 8.76 4.83 12 4.83z"/>
+            </svg>
+          </div>
+          <span class="app-name">Google</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://duckduckgo.com">
+          <div class="app-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="11" fill="#DE5833"/>
+              <path fill="#FFF" d="M12.5 5.2c-2.6 0-4.6 1.8-4.6 4.3 0 1.3.5 2.4 1.3 3.2-.5 1.1-1.3 2.5-1.3 3.7 0 1.3 1.2 2.4 4.1 2.4 2.9 0 4.6-1.1 4.6-2.8 0-1-.5-2-1.1-2.9.8-.8 1.4-2 1.4-3.6 0-2.5-1.9-4.3-4.4-4.3z"/>
+              <path fill="#FBB03B" d="M14.7 10.6c1.5.2 2.8.8 2.8 1.5s-1.3 1.1-2.8.9c-1.1-.1-1.9-.6-1.9-1.2s.8-1.3 1.9-1.2z"/>
+              <circle cx="11.1" cy="9.1" r=".8" fill="#1E293B"/>
+              <circle cx="14.1" cy="9.1" r=".8" fill="#1E293B"/>
+            </svg>
+          </div>
+          <span class="app-name">DuckDuckGo</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 2. Gaming Hub Section -->
+    <section class="hub-section" data-category="games">
+      <div class="section-header">
+        <span class="section-label">قسم الألعاب</span>
+      </div>
+      <div class="cards-grid">
+        <button type="button" class="app-card-3d" data-url="https://www.easyfun.gg/games/free-fire.html">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=ff.garena.com&sz=128" alt="Free Fire" />
+          </div>
+          <span class="app-name">Free Fire</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.easyfun.gg/games/pubg-mobile.html">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=pubgmobile.com&sz=128" alt="PUBG Mobile" />
+          </div>
+          <span class="app-name">PUBG Mobile</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.easyfun.gg/games/efootball.html">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=konami.com&sz=128" alt="eFootball PES" />
+          </div>
+          <span class="app-name">eFootball / PES</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.xbox.com/play">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=ea.com&sz=128" alt="EA FC FIFA" />
+          </div>
+          <span class="app-name">FC / FIFA</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.roblox.com">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=roblox.com&sz=128" alt="Roblox" />
+          </div>
+          <span class="app-name">Roblox</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://classic.minecraft.net">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=minecraft.net&sz=128" alt="Minecraft" />
+          </div>
+          <span class="app-name">Minecraft</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://www.crazygames.com">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=crazygames.com&sz=128" alt="CrazyGames" />
+          </div>
+          <span class="app-name">CrazyGames</span>
+        </button>
+
+        <button type="button" class="app-card-3d" data-url="https://poki.com">
+          <div class="app-icon-box">
+            <img class="real-icon" src="https://www.google.com/s2/favicons?domain=poki.com&sz=128" alt="Poki" />
+          </div>
+          <span class="app-name">Poki Games</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- In-Proxy Fullscreen Frame + Exit Pill -->
+  <button type="button" class="proxy-exit-pill" id="proxy-exit-btn">← الرئيسية • اتصال آمن</button>
+  <iframe id="uv-frame"></iframe>
+
+  <a class="wa-float" href="https://wa.me/12494682167" target="_blank" rel="noopener" aria-label="للتواصل مع المطور" title="للتواصل مع المطور">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF">
+      <path d="M12.03 2C6.5 2 2 6.5 2 12.03c0 1.77.46 3.5 1.34 5.02L2 22l5.09-1.33a10 10 0 0 0 4.94 1.3h.01c5.53 0 10.03-4.5 10.03-10.03A10.04 10.04 0 0 0 12.03 2zm5.84 14.23c-.25.7-1.44 1.33-1.99 1.41-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.98-1.29-4.92-4.3-5.07-4.5-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.3.79 1.3 1.7 2.11 1.17 1.04 2.15 1.37 2.45 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.28.1 1.77.83 2.07.98.3.15.5.23.58.35.07.13.07.73-.18 1.43z"/>
+    </svg>
+  </a>
+
+  <footer>
+    <div>جميع الحقوق محفوظة &copy; <strong>MEGO ELROSY</strong></div>
+    <div class="dev-actions">
+      <a class="dev-contact-btn" href="https://wa.me/12494682167" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
+          <path d="M12.03 2C6.5 2 2 6.5 2 12.03c0 1.77.46 3.5 1.34 5.02L2 22l5.09-1.33a10 10 0 0 0 4.94 1.3h.01c5.53 0 10.03-4.5 10.03-10.03A10.04 10.04 0 0 0 12.03 2zm5.84 14.23c-.25.7-1.44 1.33-1.99 1.41-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.98-1.29-4.92-4.3-5.07-4.5-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37h.57c.18 0 .43-.07.67.51.25.6.85 2.07.92 2.22.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.32.4-.45.54-.15.15-.31.31-.13.61.18.3.79 1.3 1.7 2.11 1.17 1.04 2.15 1.37 2.45 1.52.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.28.1 1.77.83 2.07.98.3.15.5.23.58.35.07.13.07.73-.18 1.43z"/>
+        </svg>
+        <span>للتواصل مع المطور</span>
+      </a>
+
+      <a class="icon-only-btn" href="https://t.me/orzzorr" target="_blank" rel="noopener" aria-label="Telegram" title="تليجرام">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5c542">
+          <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Locked مكتبة MEGO ELROSY Modal -->
+  <div class="modal-backdrop" id="cinema-modal">
+    <div class="modal-box compact">
+      <div class="modal-header">
+        <div class="brand-pill">
+          <span>مكتبة MEGO ELROSY</span>
+        </div>
+        <button type="button" class="mini-btn" id="close-cinema">✕ إغلاق</button>
+      </div>
+      <div class="locked-body">
+        <div class="lock-circle">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="5" y="11" width="14" height="10" rx="2"/>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+          </svg>
+        </div>
+        <div class="locked-msg">سيتم تشغيل هذا القسم قريباً بواسطة المطور MEGO ELROSY</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEGO ELROSY LIVE -->
+  <div class="modal-backdrop" id="live-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="brand-pill">
+          <span class="live-dot"></span>
+          <span>MEGO ELROSY LIVE</span>
+        </div>
+        <button type="button" class="mini-btn" id="close-live">✕ إغلاق</button>
+      </div>
+
+      <div class="live-body">
+        <div class="live-date-bar">
+          <div class="today-badge" id="live-date-label">مباريات اليوم</div>
+          <div class="day-tabs" id="day-tabs">
+            <button type="button" class="day-tab" data-offset="-1">أمس</button>
+            <button type="button" class="day-tab active" data-offset="0">اليوم</button>
+            <button type="button" class="day-tab" data-offset="1">غداً</button>
+          </div>
+        </div>
+
+        <div class="free-platforms">
+          <button type="button" class="platform-chip" data-proxy-url="https://www.yallakora.com/matches-center">يلا كورة (الجدول الكامل)</button>
+          <button type="button" class="platform-chip" data-proxy-url="https://www.filgoal.com/matches">في الجول</button>
+          <button type="button" class="platform-chip" data-proxy-url="https://www.plus.fifa.com">FIFA+</button>
+        </div>
+
+        <div id="live-matches-list" style="display:flex;flex-direction:column;gap:10px;"></div>
+
+        <div class="details-panel" id="match-details-panel">
+          <button type="button" class="mini-btn" id="back-to-matches" style="align-self:flex-start;">← الرجوع لجدول المباريات</button>
+          <div id="match-details-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEGO ELROSY AI Modal -->
+  <div class="modal-backdrop" id="ai-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="brand-pill">
+          <span class="live-dot"></span>
+          <span>MEGO ELROSY AI</span>
+        </div>
+        <button type="button" class="mini-btn" id="close-ai">✕ إغلاق</button>
+      </div>
+
+      <div class="ai-messages" id="ai-messages">
+        <div class="msg bot">أهلاً بيك في <strong>MEGO ELROSY AI</strong> ✨<br>اكتب سؤالك، ارفع أي ملف، أو صوّر بالكاميرا وابعتلي الصورة مباشرة!</div>
+      </div>
+
+      <div class="attachment-preview" id="attach-preview">
+        <span id="attach-name"></span>
+        <button type="button" class="mini-btn" id="clear-attach">إزالة ✕</button>
+      </div>
+
+      <form class="ai-input-bar" id="ai-chat-form">
+        <label class="attach-btn" title="رفع ملف أو صورة">
+          <input type="file" id="ai-file-input" accept="image/*,.pdf,.txt,.doc,.docx,.py,.js,.html,.json,.csv" hidden />
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+            <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+          </svg>
+        </label>
+
+        <label class="attach-btn" title="تصوير بالكاميرا">
+          <input type="file" id="ai-camera-input" accept="image/*" capture="environment" hidden />
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+        </label>
+
+        <input id="ai-prompt" type="text" placeholder="اكتب سؤالك هنا لـ MEGO ELROSY AI..." autocomplete="off" />
+        <button type="submit" class="send-ai-btn">إرسال</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const searchEngineInput = document.getElementById("uv-search-engine");
+    const addressInput = document.getElementById("uv-address");
+    const uvForm = document.getElementById("uv-form");
+    const uvFrame = document.getElementById("uv-frame");
+    const proxyExitBtn = document.getElementById("proxy-exit-btn");
+
+    function openInProxy(targetUrl) {
+      addressInput.value = targetUrl;
+      if (typeof uvForm.requestSubmit === "function") {
+        uvForm.requestSubmit();
+      } else {
+        uvForm.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+      }
+    }
+
+    // Show/hide floating exit button whenever #uv-frame is visible
+    new MutationObserver(() => {
+      const isVisible = uvFrame.style.display === "block" || getComputedStyle(uvFrame).display !== "none";
+      proxyExitBtn.style.display = isVisible ? "inline-flex" : "none";
+    }).observe(uvFrame, { attributes: true, attributeFilter: ["style"] });
+
+    proxyExitBtn.addEventListener("click", () => {
+      uvFrame.src = "about:blank";
+      uvFrame.style.display = "none";
+      proxyExitBtn.style.display = "none";
+    });
+
+    document.querySelectorAll(".engine-pill").forEach((pill) => {
+      pill.addEventListener("click", () => {
+        document.querySelectorAll(".engine-pill").forEach((p) => p.classList.remove("active"));
+        pill.classList.add("active");
+        searchEngineInput.value = pill.dataset.engine;
+      });
+    });
+
+    document.querySelectorAll(".app-card-3d").forEach((btn) => {
+      btn.addEventListener("click", () => openInProxy(btn.dataset.url));
+    });
+
+    document.querySelectorAll(".platform-chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        document.querySelectorAll(".modal-backdrop").forEach((m) => m.classList.remove("open"));
+        openInProxy(chip.dataset.proxyUrl);
+      });
+    });
+
+    document.querySelectorAll(".hub-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".hub-tab").forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        const target = tab.dataset.tab;
+        document.querySelectorAll(".hub-section").forEach((sec) => {
+          sec.classList.toggle("hidden", target !== "all" && sec.dataset.category !== target);
+        });
+      });
+    });
+
+    const uvErrorEl = document.getElementById("uv-error");
+    const errorBox = document.getElementById("error-box");
+    new MutationObserver(() => {
+      errorBox.classList.toggle("has-error", uvErrorEl.textContent.trim().length > 0);
+    }).observe(uvErrorEl, { childList: true, characterData: true, subtree: true });
+
+    // 3D Deep Space & Stars Background
+    window.addEventListener("DOMContentLoaded", () => {
+      if (typeof THREE === "undefined") return;
+      const canvas = document.getElementById("bg-space");
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 5;
+
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      const starCanvas = document.createElement("canvas");
+      starCanvas.width = 32;
+      starCanvas.height = 32;
+      const sctx = starCanvas.getContext("2d");
+      const grad = sctx.createRadialGradient(16, 16, 0, 16, 16, 16);
+      grad.addColorStop(0, "rgba(255,255,255,1)");
+      grad.addColorStop(0.35, "rgba(255,240,200,0.8)");
+      grad.addColorStop(1, "rgba(0,0,0,0)");
+      sctx.fillStyle = grad;
+      sctx.fillRect(0, 0, 32, 32);
+      const starTexture = new THREE.CanvasTexture(starCanvas);
+
+      function makeStarLayer(count, size, spread, colorHex, opacity) {
+        const geo = new THREE.BufferGeometry();
+        const pos = new Float32Array(count * 3);
+        for (let i = 0; i < count * 3; i++) pos[i] = (Math.random() - 0.5) * spread;
+        geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+        return new THREE.Points(geo, new THREE.PointsMaterial({
+          size, map: starTexture, color: colorHex, transparent: true, opacity, depthWrite: false, blending: THREE.AdditiveBlending
+        }));
+      }
+
+      const farStars = makeStarLayer(1800, 0.45, 220, 0xffffff, 0.85);
+      const goldStars = makeStarLayer(450, 0.75, 160, 0xffe08a, 0.75);
+      const blueStars = makeStarLayer(350, 0.65, 160, 0x93c5fd, 0.7);
+      scene.add(farStars, goldStars, blueStars);
+
+      let mouseX = 0, mouseY = 0;
+      window.addEventListener("mousemove", (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+      });
+
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        farStars.rotation.y += 0.00035;
+        goldStars.rotation.y -= 0.0005;
+        blueStars.rotation.x -= 0.0003;
+        camera.position.x += (mouseX * 1.8 - camera.position.x) * 0.03;
+        camera.position.y += (-mouseY * 1.4 - camera.position.y) * 0.03;
+        camera.lookAt(0, 0, 0);
+        renderer.render(scene, camera);
+      }
+      animate();
+    });
+
+    // Locked Cinema Modal
+    const cinemaModal = document.getElementById("cinema-modal");
+    document.getElementById("open-mego-cinema").addEventListener("click", () => cinemaModal.classList.add("open"));
+    document.getElementById("close-cinema").addEventListener("click", () => cinemaModal.classList.remove("open"));
+
+    // MEGO ELROSY LIVE (All Real Matches on Selected Cairo Date + Stats & Lineups)
+    const liveModal = document.getElementById("live-modal");
+    const openLiveBtn = document.getElementById("open-mego-live");
+    const closeLiveBtn = document.getElementById("close-live");
+    const liveList = document.getElementById("live-matches-list");
+    const dateLabel = document.getElementById("live-date-label");
+    const detailsPanel = document.getElementById("match-details-panel");
+    const detailsContent = document.getElementById("match-details-content");
+    const backToMatchesBtn = document.getElementById("back-to-matches");
+
+    function formatTime12hCairo(isoDate) {
+      return new Date(isoDate).toLocaleTimeString("ar-EG", {
+        timeZone: "Africa/Cairo",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+      });
+    }
+
+    function getCairoDateKey(dateObj) {
+      const parts = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Africa/Cairo",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).formatToParts(dateObj);
+      const y = parts.find((p) => p.type === "year").value;
+      const m = parts.find((p) => p.type === "month").value;
+      const d = parts.find((p) => p.type === "day").value;
+      return `${y}${m}${d}`;
+    }
+
+    function getTargetDate(offsetDays) {
+      const d = new Date();
+      d.setDate(d.getDate() + offsetDays);
+      const yyyymmdd = getCairoDateKey(d);
+      const arDate = d.toLocaleDateString("ar-EG", {
+        timeZone: "Africa/Cairo",
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      });
+      return { yyyymmdd, arDate };
+    }
+
+    async function showMatchDetails(leagueSlug, eventId, homeName, awayName) {
+      liveList.style.display = "none";
+      detailsPanel.classList.add("active");
+      detailsContent.innerHTML = `<p style="color:#ffe08a;text-align:center;">جاري تحميل الإحصائيات والتشكيلات...</p>`;
+
+      try {
+        const res = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${leagueSlug}/summary?event=${eventId}`);
+        const data = await res.json();
+
+        const teamsStats = data.boxscore?.teams || [];
+        let statsHtml = "";
+        if (teamsStats.length === 2) {
+          const t0 = teamsStats[0].statistics || [];
+          const t1 = teamsStats[1].statistics || [];
+          const wanted = [
+            { key: "possessionPct", label: "الاستحواذ (%)" },
+            { key: "totalShots", label: "إجمالي التسديدات" },
+            { key: "shotsOnTarget", label: "تسديدات على المرمى" },
+            { key: "wonCorners", label: "الركنيات" },
+            { key: "foulsCommitted", label: "الأخطاء" }
+          ];
+
+          wanted.forEach((w) => {
+            const v0 = parseFloat(t0.find((s) => s.name === w.key)?.displayValue || "0");
+            const v1 = parseFloat(t1.find((s) => s.name === w.key)?.displayValue || "0");
+            const sum = v0 + v1 || 1;
+            const p0 = Math.round((v0 / sum) * 100);
+            const p1 = 100 - p0;
+            statsHtml += `
+              <div class="stat-row">
+                <div class="stat-labels">
+                  <span>${v0}${w.key === "possessionPct" ? "%" : ""}</span>
+                  <span style="color:#ffe08a;">${w.label}</span>
+                  <span>${v1}${w.key === "possessionPct" ? "%" : ""}</span>
+                </div>
+                <div class="stat-bar">
+                  <div class="stat-fill-home" style="width:${p0}%"></div>
+                  <div class="stat-fill-away" style="width:${p1}%"></div>
+                </div>
+              </div>
+            `;
+          });
+        } else {
+          statsHtml = `<p style="color:#94a3b8;text-align:center;">الإحصائيات غير متوفرة بعد (تظهر عند انطلاق المباراة).</p>`;
+        }
+
+        const rosters = data.rosters || [];
+        let lineupsHtml = "";
+        if (rosters.length === 2) {
+          lineupsHtml = `<div class="lineups-grid">` + rosters.map((r) => {
+            const formation = r.formation ? ` (${r.formation})` : "";
+            const starters = (r.roster || []).filter((p) => p.starter).slice(0, 11);
+            const playersList = starters.length
+              ? starters.map((p) => `<div class="player-item">${p.jersey ? `#${p.jersey} ` : ""}${p.athlete?.displayName || ""}</div>`).join("")
+              : `<div class="player-item" style="color:#94a3b8;">لم يُعلن التشكيل بعد</div>`;
+            return `<div class="lineup-col"><h4>${r.team?.displayName || ""}${formation}</h4>${playersList}</div>`;
+          }).join("") + `</div>`;
+        }
+
+        detailsContent.innerHTML = `
+          <h3 style="text-align:center;color:#ffe08a;margin-bottom:12px;">${homeName} × ${awayName}</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:18px;">${statsHtml}</div>
+          ${lineupsHtml}
+        `;
+      } catch {
+        detailsContent.innerHTML = `<p style="color:#fda4af;text-align:center;">تعذر تحميل تفاصيل المباراة حالياً.</p>`;
+      }
+    }
+
+    backToMatchesBtn.addEventListener("click", () => {
+      detailsPanel.classList.remove("active");
+      liveList.style.display = "flex";
+    });
+
+    async function loadLiveMatches(offsetDays = 0) {
+      detailsPanel.classList.remove("active");
+      liveList.style.display = "flex";
+      const { yyyymmdd, arDate } = getTargetDate(offsetDays);
+      dateLabel.textContent = arDate;
+      liveList.innerHTML = `<p style="color:#ffe08a;text-align:center;">جاري جلب مباريات ${arDate}...</p>`;
+
+      try {
+        const res = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard?dates=${yyyymmdd}`);
+        const data = await res.json();
+
+        // Strictly keep only matches whose Cairo local date matches the selected day
+        const events = (data.events || []).filter((ev) => {
+          return getCairoDateKey(new Date(ev.date)) === yyyymmdd;
+        });
+
+        liveList.innerHTML = "";
+        if (!events.length) {
+          liveList.innerHTML = `<p style="color:#94a3b8;text-align:center;">لا توجد مباريات مسجلة لهذا اليوم في القائمة، جرب فتح يلا كورة أو في الجول فوق.</p>`;
+          return;
+        }
+
+        const rank = { in: 0, pre: 1, post: 2 };
+        events.sort((a, b) => (rank[a.status?.type?.state] ?? 3) - (rank[b.status?.type?.state] ?? 3));
+
+        events.slice(0, 40).forEach((ev) => {
+          const comp = ev.competitions?.[0];
+          const home = comp?.competitors?.find((c) => c.homeAway === "home");
+          const away = comp?.competitors?.find((c) => c.homeAway === "away");
+          if (!home || !away) return;
+
+          const state = comp.status?.type?.state;
+          const leagueSlug = ev.league?.slug || "all";
+          const leagueTitle = ev.league?.name || ev.season?.slug || "مباراة دولية";
+          const kickTime12 = formatTime12hCairo(ev.date);
+
+          let statusClass = "pre";
+          let statusLabel = "لم تبدأ";
+          let centerMain = kickTime12;
+
+          if (state === "in") {
+            statusClass = "live";
+            statusLabel = comp.status?.type?.shortDetail || "مباشر الآن";
+            centerMain = `${home.score ?? "0"} - ${away.score ?? "0"}`;
+          } else if (state === "post") {
+            statusClass = "post";
+            statusLabel = "انتهت";
+            centerMain = `${home.score ?? "0"} - ${away.score ?? "0"}`;
+          }
+
+          const homeName = home.team.shortDisplayName || home.team.displayName;
+          const awayName = away.team.shortDisplayName || away.team.displayName;
+
+          const card = document.createElement("div");
+          card.className = "match-card";
+          card.innerHTML = `
+            <div class="match-league">
+              <span>${leagueTitle}</span>
+              <span>توقيت مصر</span>
+            </div>
+            <div class="match-row">
+              <div class="team-side">
+                <img src="${home.team.logo || ""}" alt="" />
+                <span>${homeName}</span>
+              </div>
+              <div class="match-center">
+                <div class="match-score">${centerMain}</div>
+                <div class="match-status ${statusClass}">${statusLabel}</div>
+              </div>
+              <div class="team-side away">
+                <span>${awayName}</span>
+                <img src="${away.team.logo || ""}" alt="" />
+              </div>
+            </div>
+          `;
+          card.addEventListener("click", () => showMatchDetails(leagueSlug, ev.id, homeName, awayName));
+          liveList.appendChild(card);
+        });
+      } catch {
+        liveList.innerHTML = `<p style="color:#fda4af;text-align:center;">تعذر تحميل المباريات في المعاينة المحلية؛ تقدر تفتح يلا كورة أو في الجول من الأزرار فوق.</p>`;
+      }
+    }
+
+    document.querySelectorAll(".day-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".day-tab").forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        loadLiveMatches(Number(tab.dataset.offset));
+      });
+    });
+
+    openLiveBtn.addEventListener("click", () => {
+      liveModal.classList.add("open");
+      loadLiveMatches(0);
+    });
+    closeLiveBtn.addEventListener("click", () => liveModal.classList.remove("open"));
+
+    // MEGO ELROSY AI Modal
+    const aiModal = document.getElementById("ai-modal");
+    const openAiBtn = document.getElementById("open-mego-ai");
+    const closeAiBtn = document.getElementById("close-ai");
+    const aiForm = document.getElementById("ai-chat-form");
+    const aiPrompt = document.getElementById("ai-prompt");
+    const aiMessages = document.getElementById("ai-messages");
+
+    const fileInput = document.getElementById("ai-file-input");
+    const cameraInput = document.getElementById("ai-camera-input");
+    const attachPreview = document.getElementById("attach-preview");
+    const attachName = document.getElementById("attach-name");
+    const clearAttach = document.getElementById("clear-attach");
+
+    let pendingFile = null;
+
+    openAiBtn.addEventListener("click", () => aiModal.classList.add("open"));
+    closeAiBtn.addEventListener("click", () => aiModal.classList.remove("open"));
+
+    function handleSelectedFile(file) {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result;
+        pendingFile = {
+          name: file.name,
+          mimeType: file.type || "application/octet-stream",
+          base64: result.split(",")[1],
+          previewUrl: file.type.startsWith("image/") ? result : null
+        };
+        attachName.textContent = `📎 مرفق جاهز: ${file.name}`;
+        attachPreview.classList.add("active");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    fileInput.addEventListener("change", (e) => handleSelectedFile(e.target.files[0]));
+    cameraInput.addEventListener("change", (e) => handleSelectedFile(e.target.files[0]));
+
+    clearAttach.addEventListener("click", () => {
+      pendingFile = null;
+      fileInput.value = "";
+      cameraInput.value = "";
+      attachPreview.classList.remove("active");
+    });
+
+    function addMsg(text, role, imageUrl = null) {
+      const div = document.createElement("div");
+      div.className = `msg ${role}`;
+      if (imageUrl) {
+        const img = document.createElement("img");
+        img.src = imageUrl;
+        img.className = "chat-thumb";
+        div.appendChild(img);
+      }
+      const span = document.createElement("span");
+      span.textContent = text;
+      div.appendChild(span);
+      aiMessages.appendChild(div);
+      aiMessages.scrollTop = aiMessages.scrollHeight;
+      return span;
+    }
+
+    aiForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const prompt = aiPrompt.value.trim();
+      if (!prompt && !pendingFile) return;
+
+      const userLabel = prompt || `تحليل المرفق: ${pendingFile.name}`;
+      addMsg(userLabel, "user", pendingFile?.previewUrl || null);
+      aiPrompt.value = "";
+
+      const payload = {
+        prompt: prompt || "اشرح أو حل ما في هذا الملف/الصورة بالتفصيل.",
+        file: pendingFile ? {
+          name: pendingFile.name,
+          mimeType: pendingFile.mimeType,
+          data: pendingFile.base64
+        } : null
+      };
+
+      pendingFile = null;
+      fileInput.value = "";
+      cameraInput.value = "";
+      attachPreview.classList.remove("active");
+
+      const loadingSpan = addMsg("جاري التفكير...", "bot");
+
+      try {
+        const res = await fetch("/api/ai", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "تعذر الاتصال بخادم الذكاء الاصطناعي");
+        loadingSpan.textContent = data.reply;
+      } catch (err) {
+        loadingSpan.textContent = "⚠️ تأكد من تفعيل مسار /api/ai على السيرفر: " + err.message;
+      }
+    });
+  </script>
+</body>
 </html>
